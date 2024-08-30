@@ -1,0 +1,172 @@
+/* Base styles remain unchanged */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(34, 26, 36);
+    text-align: center;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.box {
+    height: 110px;
+    width: 110px;
+    border-radius: 15px;
+    border: none;
+    font-size: 40px;
+    color: rgb(218, 82, 32);
+    background-color: blanchedalmond;
+    transition: transform 0.3s ease;
+}
+
+.box:active {
+    transform: scale(1.1);
+}
+
+#reset-btn, #new-btn {
+    padding: 20px;
+    margin: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(218, 82, 32);
+    color: wheat;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: rgb(255, 99, 71);
+    transform: scale(1.05);
+}
+
+#msg {
+    color: wheat;
+    font-size: 50px;
+}
+
+.msg-container {
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1024px) {
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .game {
+        width: 300px;
+        height: 300px;
+        gap: 20px;
+    }
+
+    .box {
+        height: 80px;
+        width: 80px;
+        font-size: 30px;
+    }
+
+    #reset-btn, #new-btn {
+        padding: 15px;
+        margin: 30px;
+    }
+
+    #msg {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .game {
+        width: 240px;
+        height: 240px;
+        gap: 15px;
+    }
+
+    .box {
+        height: 70px;
+        width: 70px;
+        font-size: 25px;
+    }
+
+    #reset-btn, #new-btn {
+        padding: 12px;
+        margin: 25px;
+    }
+
+    #msg {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .game {
+        width: 200px;
+        height: 200px;
+        gap: 10px;
+    }
+
+    .box {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+
+    #reset-btn, #new-btn {
+        padding: 10px;
+        margin: 20px;
+        font-size: 14px;
+    }
+
+    #msg {
+        font-size: 28px;
+    }
+}
